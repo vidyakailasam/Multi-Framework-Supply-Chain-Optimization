@@ -1,7 +1,5 @@
-# Availability Bridge WK05 – ML Pipeline
-
 ## Overview
-End-to-end machine learning pipeline built on data from `Availability_Bridge_WK05.pdf`.
+End-to-end machine learning pipeline built on supply chain data which
 Covers **clustering** (unsupervised) and **classification** (supervised) across six frameworks,
 all tracked with **MLflow**.
 
