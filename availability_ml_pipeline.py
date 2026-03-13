@@ -2,7 +2,7 @@
 =============================================================================
 Availability Bridge - Complete ML Pipeline
 =============================================================================
-Data Source : Availability_Bridge_WK05.pdf
+Data Source : Supply chain Bridge across India
 Frameworks  : MLflow · Scikit-Learn · XGBoost · TensorFlow/Keras · PyTorch · PySpark MLlib
 Tasks       : Clustering (unsupervised) + Classification (supervised)
 =============================================================================
@@ -66,7 +66,7 @@ def out(filename: str) -> str:
     return os.path.join(OUTPUT_DIR, filename)
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 1.  RAW DATA  (extracted from Availability_Bridge_WK05.pdf)
+# 1.  RAW DATA 
 # ─────────────────────────────────────────────────────────────────────────────
 RAW = {
     "node": ["TVN","HUB","VSK","BBN","GUW","IDR","JAI","LUD","NAG","PAT"],
@@ -674,9 +674,9 @@ results = {
 with open(out("ml_results.json"), "w") as f:
     json.dump(results, f, indent=2)
 
-print(f"\n✅  Results JSON saved → {out('ml_results.json')}")
-print(f"✅  All plots saved  → {OUTPUT_DIR}")
-print("✅  Run  `mlflow ui`  to explore all experiment runs.")
+print(f"\n Results JSON saved → {out('ml_results.json')}")
+print(f" All plots saved  → {OUTPUT_DIR}")
+print("  Run  `mlflow ui`  to explore all experiment runs.")
 print("=" * 70)
 print("PIPELINE COMPLETE")
 print("=" * 70)
