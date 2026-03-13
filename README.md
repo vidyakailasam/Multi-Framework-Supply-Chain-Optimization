@@ -75,23 +75,3 @@ mlflow ui
 | `mlruns/` | MLflow artefacts & metrics (auto-created) |
 
 ---
-
-## Architecture (TF / PyTorch DNN)
-```
-Input (10 features)
-  → Dense 64 + BatchNorm + ReLU + Dropout(0.3)
-  → Dense 32 + BatchNorm + ReLU + Dropout(0.2)
-  → Dense 16 + ReLU
-  → Dense 3 (Softmax / CrossEntropy)
-```
-
----
-
-## Extending the Pipeline
-* **More data:** Replace the synthetic augmentation block (Section 1) with
-  real weekly snapshot CSVs exported from your warehouse systems.
-* **Hyperparameter tuning:** Wrap any run in `mlflow.autolog()` and use
-  `optuna` or `hyperopt` to search over param grids.
-* **Serving:** `mlflow models serve -m runs:/<RUN_ID>/xgboost_model -p 1234`
-* **Spark scale-out:** Point the SparkSession to your EMR / Databricks cluster
-  instead of `local[*]`.
